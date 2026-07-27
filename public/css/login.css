@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: black 2px solid;
+    border-radius: 20px;
+    width: clamp(500px, 100vw, 300px);
+    padding: 2rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.input-box {
+  position: relative;
+  width: 100%;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 16px;
+  border: 2px solid #999;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+}
+
+.input-box label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 5px;
+  color: #777;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+/* Move label up when focused or when input has content */
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 13px;
+  color: #007bff;
+}
+
+.input-box input:focus {
+  border-color: #007bff;
+}
+
+
+/* 
+BUTTON DESIGN
+*/
+.login-btn {
+    position: relative;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6366f1;
+    background: transparent;
+    border: 2px solid #6366f1;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease;
+    width: 100%;
+}
+
+.login-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #6366f1;
+    z-index: -1;
+    transition: width 0.4s ease;
+}
+
+.login-btn:hover {
+    color: #ffffff;
+}
+
+.login-btn:hover::before {
+    width: 100%;
+}
