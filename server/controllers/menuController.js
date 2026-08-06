@@ -31,7 +31,7 @@ export const add_Item_In_Menu = async(req, res) => {
 
 export const get_Item_In_Menu = async(req, res) => {
     try {
-        
+
         const items = await Item.find();
         res.status(200).json(items);
 
@@ -73,5 +73,20 @@ export const update_Item_In_Menu = async (req, res) => {
         return res.status(500).json({message: "An expected error occured. Please try again later."});
     }
 
+}
+
+export const delete_Item_In_Menu = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const deletedItem = await Item.findByIdAndDelete(id);
+
+        if (!deletedItem) return res.status(404).json({ message: "Menu item not found" });
+
+        return res.status(200).json({ message: "Menu Item deleted successfully" });
+
+       
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
 }
 
