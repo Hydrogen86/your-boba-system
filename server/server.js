@@ -11,6 +11,7 @@ import connectDB from "./config/db.js";
 
 
 import authRoute from "./routes/authRoutes.js";
+import menuRoute from "./routes/menuRoutes.js"
 
 connectDB();
 
@@ -22,6 +23,7 @@ const PORT = process.env.PORT || 2500;
 app.use(express.json());
 
 app.use('/auth', authRoute);
+app.use('/menu', menuRoute);
 
 
 // Listen for successful connection
