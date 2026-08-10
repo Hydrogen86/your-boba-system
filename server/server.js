@@ -11,7 +11,8 @@ import connectDB from "./config/db.js";
 
 
 import authRoute from "./routes/authRoutes.js";
-import menuRoute from "./routes/menuRoutes.js"
+import menuRoute from "./routes/menuRoutes.js";
+import addsOnRoute from "./routes/addsOnRoute.js"
 
 connectDB();
 
@@ -24,6 +25,7 @@ app.use(express.json());
 
 app.use('/auth', authRoute);
 app.use('/menu', menuRoute);
+app.use('/adds-on', addsOnRoute);
 
 
 // Listen for successful connection
