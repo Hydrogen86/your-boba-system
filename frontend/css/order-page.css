@@ -1,0 +1,24 @@
+.menu-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    background-color: green;
+    padding: 1rem;
+    border: 1px black solid;
+    border-radius: 8px;
+
+    img {
+        width: 220px;
+        height: 280px;
+    }
+
+    .item__select-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}

@@ -12,10 +12,8 @@ const orderSchema = new mongoose.Schema({
         }
     ],
 
-    orderType: {type: String, enum: ["Dine in", "Take out"], required: true},
-    tableNumber: {type: Number, 
-        function () {
-        return this.orderType === "Dine in"; }}
+    orderType: {type: String, enum: ["dine in", "take out", "delivery"], required: true},
+    tableNumber: {type: Number, required: false}
 
 }, { collection: 'order', timestamps: true });
 
