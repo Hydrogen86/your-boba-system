@@ -9,12 +9,29 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/order-page.css">
 
+    <!-- Plug-ins -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </head>
 <body>
+    <header>
+        <div class="icon">
+            <img src="../assets/icons/milk-tea-icon.png" alt="milktea-icon">
+        </div>
+        <nav>
+            <li id="all__link-btn">ALL</li>
+            <li id="milk-tea__link-btn">MILK TEA</li>
+            <li id="fruit-tea__link-btn">FRUIT TEA</li>
+            <li id="shake__link-btn">SHAKE</li>
+        </nav>
+    </header>
+
     <main>
+
         <div class="menu-container">
 
-            <div class="item">
+            <div class="item milktea-products">
                 <img src="../assets/images/milk-tea_example.jpg" alt="example-image">
 
                 <div class="details-box">
@@ -36,8 +53,8 @@
                         <select id="size">
                             <option value="">Size</option>
                             <option value="50oz">50oz</option>
-                            <option value="80">80z</option>
-                            <option value="120">120z</option>
+                            <option value="80">80oz</option>
+                            <option value="120">120oz</option>
                         </select>
 
                         <!-- Adds-on -->
@@ -67,10 +84,12 @@
                         </select>
                     </div>
 
+                    <button type="button" class="add-order__btn">Add Order</button>
+
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item milktea-products">
                 <img src="../assets/images/milk-tea_example-two.jpg" alt="example-image">
 
                 <div class="details-box">
@@ -92,8 +111,65 @@
                         <select id="size">
                             <option value="">Size</option>
                             <option value="50oz">50oz</option>
-                            <option value="80">80z</option>
-                            <option value="120">120z</option>
+                            <option value="80">80oz</option>
+                            <option value="120">120oz</option>
+                        </select>
+
+                        <!-- Adds-on -->
+                        <select id="adds-on">
+                            <option value="">Adds-on</option>
+                            <option value="marshmallow">Marsmallow</option>
+                            <option value="kisses">Kisses</option>
+                            <option value="springkler">Springkler</option>
+                        </select>
+
+                        <!-- Type -->
+                        <select id="order-type">
+                            <option value="">Order Type</option>
+                            <option value="dine in">Dine in</option>
+                            <option value="take out">Take Out</option>
+                        </select>
+
+                        <!-- Table Number -->
+                        <select id="table-number">
+                            <option value="">Table Number</option>
+                            <option value="A1">A1</option>
+                            <option value="A2">A2</option>
+                            <option value="A3">A3</option>
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
+                            <option value="B3">B3</option>
+                        </select>
+                    </div>
+                    <button type="button" class="add-order__btn">Add Order</button>
+                </div>
+            </div>
+
+
+            <div class="item fruittea-products">
+                <img src="../assets/images/fruit-tea_example-one.jpg" alt="example-image">
+
+                <div class="details-box">
+                    <p class="item-flavor">Orange Tea</p>
+                    <p>₱70.00</p>
+
+                    <div class="item__select-details">
+                        <!-- Sugar Level -->
+                        <select id="sugar-level">
+                            <option value="">Sugar Level</option>
+                            <option value="0">0%</option>
+                            <option value="30">30%</option>
+                            <option value="50">50%</option>
+                            <option value="70">70%</option>
+                            <option value="100">100%</option>
+                        </select>
+
+                        <!-- Size -->
+                        <select id="size">
+                            <option value="">Size</option>
+                            <option value="50oz">50oz</option>
+                            <option value="80">80oz</option>
+                            <option value="120">120oz</option>
                         </select>
 
                         <!-- Adds-on -->
@@ -123,10 +199,71 @@
                         </select>
                     </div>
 
+                    <button type="button" class="add-order__btn">Add Order</button>
+
+                </div>
+            </div>
+
+            <div class="item fruittea-products">
+                <img src="../assets/images/fruit-tea_example-two.jpg" alt="example-image">
+
+                <div class="details-box">
+                    <p class="item-flavor">Mixed Berry Tea</p>
+                    <p>₱70.00</p>
+
+                    <div class="item__select-details">
+                        <!-- Sugar Level -->
+                        <select id="sugar-level">
+                            <option value="">Sugar Level</option>
+                            <option value="0">0%</option>
+                            <option value="30">30%</option>
+                            <option value="50">50%</option>
+                            <option value="70">70%</option>
+                            <option value="100">100%</option>
+                        </select>
+
+                        <!-- Size -->
+                        <select id="size">
+                            <option value="">Size</option>
+                            <option value="50oz">50oz</option>
+                            <option value="80">80oz</option>
+                            <option value="120">120oz</option>
+                        </select>
+
+                        <!-- Adds-on -->
+                        <select id="adds-on">
+                            <option value="">Adds-on</option>
+                            <option value="marshmallow">Marsmallow</option>
+                            <option value="kisses">Kisses</option>
+                            <option value="springkler">Springkler</option>
+                        </select>
+
+                        <!-- Type -->
+                        <select id="order-type">
+                            <option value="">Order Type</option>
+                            <option value="dine in">Dine in</option>
+                            <option value="take out">Take Out</option>
+                        </select>
+
+                        <!-- Table Number -->
+                        <select id="table-number">
+                            <option value="">Table Number</option>
+                            <option value="A1">A1</option>
+                            <option value="A2">A2</option>
+                            <option value="A3">A3</option>
+                            <option value="B1">B1</option>
+                            <option value="B2">B2</option>
+                            <option value="B3">B3</option>
+                        </select>
+                    </div>
+                    <button type="button" class="add-order__btn">Add Order</button>
                 </div>
             </div>
 
         </div>
     </main>
+
+
+    <script src="../js/main.js" type="module"></script>
 </body>
 </html>
